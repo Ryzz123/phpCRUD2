@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+/* reset html */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+div pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+figure,
+header,
+nav,
+section,
+article,
+aside,
+footer,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: 'Poppins',Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    background-image: url(https://img.freepik.com/free-vector/white-abstract-background_23-2148810113.jpg?w=2000);
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+.display {
+    display: none;
+}
+
+.a {
+    text-decoration: none;
+    color: white;
+}
+
+.a:hover {
+    color: white;
+}
+
+/* area navbar */
+nav {
+    height: 14%;
+    width: 100%;
+    background-color: blueviolet;
+}
+
+.navbar-head .navbar-profil {
+    display: flex;
+}
+
+.navbar-profil {
+    position: relative;
+    top: 0.5rem;
+    margin-left: 1rem;
+}
+
+.navbar-head img {
+    width: 45px;
+    border-radius: 50%;
+}
+
+.navbar-profil h3 {
+    position: relative;
+    margin-left: 0.5rem;
+    top: 0.6rem;
+    color: white;
+}
+
+.navbar-list {
+    position: relative;
+    bottom: 1.3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.list-navbar-li {
+    list-style-type: none;
+    padding: 0px 2rem;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.login {
+    background-color: rgb(69, 42, 143);
+    padding: 5px 2rem;
+    position: absolute;
+    right: 3rem;
+    bottom: 0px;
+    border-radius: 10px;
+    border-right: 4px solid white;
+    border-left: 4px solid white;
+    transition: 1s;
+    cursor: pointer;
+}
+
+/* area konten */
+.profil-konten {
+    position: relative;
+    top: 2.7rem;
+    background-color: blueviolet;
+    border-top: 5px solid white;
+    margin-left: 2rem;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.konten {
+    background-color: rgb(203, 197, 197);
+    margin-left: 2rem;
+    text-align: center;
+    height: 200px;
+    align-items: center;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.konten1 {
+    background-color: rgb(203, 197, 197);
+    margin-left: 2rem;
+    text-align: center;
+    height: 450px;
+    align-items: center;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.main {
+    position: relative;
+    bottom: 1rem;
+    margin: auto !important;
+}
+
+.profil-konten img {
+    width:120px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 50%;;
+}
+
+.profil {
+    position: relative;
+    top: 3rem;
+    list-style-type: none;
+}
+
+.profil2 {
+    position: relative;
+    top: 3rem;
+    list-style-type: none;
+}
+
+.profil2 ul {
+    list-style-type: none;
+}
+
+.profil li {
+    padding: 10px 0px;
+    background-color: blueviolet;
+    width: 100px;
+    margin: 20px auto;
+    color: white;
+    border-radius: 20px;
+}
+
+input {
+    margin-top: 1rem;
+    background-color: rgba(240, 248, 255, 0);
+    border: none;
+    text-align: center;
+}
+
+.input2 {
+    margin-top: 1rem;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border: 2px;
+    border-radius: 30px;
+}
+
+button {
+    padding: 2px 20px;
+    color: white;
+    border: 1px solid blueviolet;
+    background-color: blueviolet;
+    border-radius: 30px;
+    margin-top: 15px;
+}
+
+/* data table */
+.data-table {
+    background-color: blueviolet;
+    position: absolute;
+    text-align: center;
+    top: 7.6rem;
+    right: 2rem;
+    display: flex;
+    border-radius: 30px;
+}
+
+table {
+    position: relative;
+    margin: auto;
+}
+
+.data-head1,.data-list1 {
+    position: relative;
+    right: 1.3rem;
+}
+
+.data-head2,.data-list2 {
+    position: relative;
+    left: 1rem;
+}
+
+.data-head,.data-list {
+   padding-right: 1rem;
+}
+
+tr {
+    border: none;
+}
+
+th,td {
+    color: white;
+}
+
+.data-list a {
+    text-decoration: none;
+    color: white;
+}
+
+/* area footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    background-color: blueviolet;
+}
+
+footer p {
+   margin-top: 20px;
+   color: white;
+}
