@@ -96,7 +96,7 @@ function ubah($data) {
     $asal = htmlspecialchars($data["asal"]);
     $universitas = htmlspecialchars($data["universitas"]);
     $jurusan = htmlspecialchars($data["jurusan"]);
-    $gambarLama = $data["gambar"];
+    $gambarLama = $data["gambarLama"];
 
     // user pilih gambar baru atau tidak
     if( $_FILES["gambar"]["error"] === 4 ) {

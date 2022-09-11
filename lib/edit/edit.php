@@ -65,6 +65,7 @@ if( isset($_POST["submit"]) ) {
                         <ul>                      
                             <li>
                                 <input type="hidden" name="id" value="<?php echo $data["id"] ?>">
+                                <input type="hidden" name="gambarLama" value="<?php echo $data["gambar"] ?>">
                             </li>
 
                             <li>
