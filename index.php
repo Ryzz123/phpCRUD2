@@ -36,7 +36,7 @@ if( isset($_POST["cari"]) ) {
                         <li class="list-navbar-li">About</li>
                         <li class="list-navbar-li">Content</li>
                         <li class="list-navbar-li">Contact</li>
-                        <li class="list-navbar-li login">Login  <i class="fa-sharp fa-solid fa-right-to-bracket"></i></li>
+                        <a href="lib/register/sign-up/register.php"><li class="list-navbar-li login">SIGN-UP  <i class="fa-sharp fa-solid fa-right-to-bracket"></i></li></a>
                     </ul>
                 </div>
             </div>
