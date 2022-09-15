@@ -108,5 +108,6 @@ if( isset($_POST["cari"]) ) {
     <!-- script -->
 <script src="other/js/bootstrap.bundle.min.js"></script>
 <script src="other/js/bootstrap.js"></script>
+<script src="other/js/script.js"></script>
 </body>
 </html>
