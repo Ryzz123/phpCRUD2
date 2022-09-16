@@ -34,6 +34,10 @@
                                 <input   class="input2" type="password" name="password2" id="password2">
                             </li>
                          <button type="submit" name="sign" class="konten-li">SIGN-UP<i class="fa-solid fa-caret-right"></i></button>
+                         </li><br><br>
+                         <li>
+                            <p>Sudah Punya Akun?</p><br>
+                            <button class="konten-li"><a style="text-decoration: none; color: white;" href="../login/login.php">Masuk</a></button>
                          </li>
                         </ul>
                     </form>

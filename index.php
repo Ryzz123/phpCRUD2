@@ -1,4 +1,11 @@
 <?php 
+session_start();
+
+if( !isset($_SESSION["login"]) ) {
+    header("Location: lib/register/login/login.php");
+    exit;
+}
+
 require 'function/function.php';
 
 $data_gabut = query("SELECT * FROM gabut");
@@ -36,7 +43,7 @@ if( isset($_POST["cari"]) ) {
                         <li class="list-navbar-li">About</li>
                         <li class="list-navbar-li">Content</li>
                         <li class="list-navbar-li">Contact</li>
-                        <a href="lib/register/sign-up/register.php"><li class="list-navbar-li login">SIGN-UP  <i class="fa-sharp fa-solid fa-right-to-bracket"></i></li></a>
+                        <a href="lib/logout/logout.php"><li class="list-navbar-li login">LOG-OUT  <i class="fa-sharp fa-solid fa-right-to-bracket"></i></li></a>
                     </ul>
                 </div>
             </div>

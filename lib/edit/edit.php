@@ -1,4 +1,10 @@
 <?php 
+session_start();
+
+if( !isset($_SESSION["login"]) ) {
+    header("Location: ../register/login/login.php");
+    exit;
+}
 require '../../function/function.php';
 
 $id = $_GET["id"];
@@ -47,7 +53,7 @@ if( isset($_POST["submit"]) ) {
                         <li class="list-navbar-li">About</li>
                         <li class="list-navbar-li">Content</li>
                         <li class="list-navbar-li">Contact</li>
-                        <li class="list-navbar-li login">Login  <i class="fa-sharp fa-solid fa-right-to-bracket"></i></li>
+                        <a href="../logout/logout.php"><li class="list-navbar-li login">LOG-OUT  <i class="fa-sharp fa-solid fa-right-to-bracket"></i></li></a>
                     </ul>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require '../../../function/function.php';
 
 if( isset($_POST["login"]) ) {
@@ -14,6 +15,9 @@ if( isset($_POST["login"]) ) {
         // cek password
         $row = mysqli_fetch_assoc($result);
         if( password_verify($password, $row["password"]) ) {
+            // Set Session
+            $_SESSION["login"] = true;
+
             header("Location: ../../../index.php");
             exit;
         }
@@ -56,6 +60,10 @@ if( isset($_POST["login"]) ) {
                             <input class="input2" type="password" name="password" id="password"><br>
                          <li>
                          <button type="submit" name="login" class="konten-li">LOGIN<i class="fa-solid fa-caret-right"></i></button>
+                         </li><br>
+                         <li>
+                            <p>Belum Punya Akun?</p><br>
+                            <button class="konten-li"><a style="text-decoration: none; color: white;" href="../sign-up/register.php">Daftar</a></button>
                          </li>
                         </ul>
                     </form>
