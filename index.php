@@ -8,7 +8,18 @@ if( !isset($_SESSION["login"]) ) {
 
 require 'function/function.php';
 
-$data_gabut = query("SELECT * FROM gabut");
+
+// pagination
+// konfigurasi
+$jumlahDataPerHalaman = 2;
+$jumlahData = count(query("SELECT * FROM gabut"));
+$jumlahHalaman = ceil($jumlahData / $jumlahDataPerHalaman);
+$halamanAwal = ( isset($_GET['halaman']) ) ? $_GET["halaman"] : 1;
+
+// lakukan logika 
+$awalData = ( $jumlahDataPerHalaman * $halamanAwal ) - $jumlahDataPerHalaman;
+
+$data_gabut = query("SELECT * FROM gabut LIMIT $awalData, $jumlahDataPerHalaman");
 
 // tombol cari ditekan
 if( isset($_POST["cari"]) ) {
@@ -86,7 +97,7 @@ if( isset($_POST["cari"]) ) {
                 <?php $i = 1; ?>
                 <?php foreach( $data_gabut as $data ) : ?>
                     <tr>
-                        <td class="data-list"><?php echo $i; ?></td>
+                        <td class="data-list"><?php echo $i + $awalData; ?></td>
                         <td class="data-list">
                             <a href="lib/edit/edit.php?id=<?php echo $data["id"]; ?>">Ubah</a> 
                             <a href="lib/delete/delete.php?id=<?php echo $data["id"] ?>" onclick="return confirm('yakin?');">Hapus</a>
@@ -104,6 +115,26 @@ if( isset($_POST["cari"]) ) {
         </div>
     <!-- akhir area table -->
 
+    <!-- area pagination -->
+    <div style="display: flex; position: absolute; top: 20.6rem; left: 30.3rem;" class="data-page container">
+            <?php if( $halamanAwal > 1 ) : ?>
+                <a style="text-decoration: none; color: black;" href="?halaman=<?php echo $halamanAwal - 1; ?>">&lt;</a>
+            <?php endif; ?>
+
+            <?php for($i = 1; $i <= $jumlahHalaman; $i++ ) : ?>
+                <?php if( $i == $halamanAwal ) : ?>
+                        <a style="font-weight: bold; color: blueviolet; text-decoration: none; padding-right: 10px; padding-left: 10px;" class="pagination" href="?halaman=<?php echo $i; ?>"><?php echo $i ?></a>
+                    <?php else : ?>
+                        <a style="text-decoration: none; padding-left: 10px; padding-right: 10px; color: black;" href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a>
+                <?php endif; ?>
+            <?php endfor; ?>
+
+            <?php if( $halamanAwal < $jumlahHalaman ) : ?>
+                <a style="text-decoration: none; color: black;" href="?halaman=<?php echo $halamanAwal + 1; ?>">&gt;</a>
+            <?php endif; ?>
+    </div>
+
+    <!-- area pagination -->
     <!-- footer -->
         <footer>
             <div class="footer-bg">
