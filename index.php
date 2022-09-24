@@ -71,8 +71,8 @@ if( isset($_POST["cari"]) ) {
                     <button class="konten-li"><a class="a" href="
                     lib/add/add.php">TAMBAH</a> <i class="fa-solid fa-right-to-bracket"></i></button>
                     <form method="post" action="">
-                        <input type="text" name="keyword" size="30" placeholder="Masukan Pencarian" autofocus><br>
-                        <button name="cari" class="konten-li">CARI <i class="fa-solid fa-caret-right"></i></button>
+                        <input id="keyword" type="text" name="keyword" size="30" placeholder="Masukan Pencarian" autofocus><br>
+                        <button id="tombol-cari" name="cari" class="konten-li">CARI <i class="fa-solid fa-caret-right"></i></button>
                     </form>
                     
                 </ul>
@@ -133,8 +133,8 @@ if( isset($_POST["cari"]) ) {
                 <a style="text-decoration: none; color: black;" href="?halaman=<?php echo $halamanAwal + 1; ?>">&gt;</a>
             <?php endif; ?>
     </div>
-
     <!-- area pagination -->
+    
     <!-- footer -->
         <footer>
             <div class="footer-bg">
@@ -147,5 +147,6 @@ if( isset($_POST["cari"]) ) {
 <script src="other/js/bootstrap.bundle.min.js"></script>
 <script src="other/js/bootstrap.js"></script>
 <script src="other/js/script.js"></script>
+<script src="other/js/app.js"></script>
 </body>
 </html>
